@@ -7,25 +7,29 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   password = '';
-  useLetters = false;
-  useNumbers = false;
-  useSymbols = false;
+  includeLetters = false;
+  includeNumbers = false;
+  includeSymbols = false;
 
   onButtonClick() {
     this.password = 'My password'
+    console.log(`The password must include:
+    letters: ${this.includeLetters}
+    numbers: ${this.includeNumbers}
+    symbols: ${this.includeSymbols}`)
   }
 
   onChangeUseLetters() {
-    this.useLetters = !this.useLetters;
-    console.log(this.useLetters)
+    this.includeLetters = !this.includeLetters;
+    console.log(this.includeLetters)
   }
 
   onChangeUseNumbers() {
-    this.useNumbers = !this.useNumbers;
-    console.log(this.useNumbers)
+    this.includeNumbers = !this.includeNumbers;
+    console.log(this.includeNumbers)
   }
 
   onChangeUseSymbols() {
-    this.useSymbols = !this.useSymbols
+    this.includeSymbols = !this.includeSymbols
   }
 }
