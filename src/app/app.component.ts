@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pwGen';
+  password = '';
+  useLetters = false;
+  useNumbers = false;
+  useSymbols = false;
+
+  onButtonClick() {
+    this.password = 'My password'
+  }
+
+  onChangeUseLetters() {
+    this.useLetters = !this.useLetters;
+    console.log(this.useLetters)
+  }
+
+  onChangeUseNumbers() {
+    this.useNumbers = !this.useNumbers;
+    console.log(this.useNumbers)
+  }
+
+  onChangeUseSymbols() {
+    this.useSymbols = !this.useSymbols
+  }
 }
